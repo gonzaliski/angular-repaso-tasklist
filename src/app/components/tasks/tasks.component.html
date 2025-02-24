@@ -1,0 +1,9 @@
+<section>
+  <ul>
+    @for (task of tasks | taskFilter:type; track $index) {
+    <li>
+      <app-task-item [task]="task" />
+    </li>
+    }
+  </ul>
+</section>

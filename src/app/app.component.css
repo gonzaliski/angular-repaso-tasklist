@@ -1,0 +1,21 @@
+ul {
+  background-color: darkslategray;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10%;
+  height: 70px;
+  justify-content: center;
+  list-style-type: none;
+}
+li {
+  cursor: pointer;
+  font-weight: 500;
+}
+li:hover {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 2px;
+}

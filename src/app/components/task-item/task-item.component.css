@@ -1,0 +1,27 @@
+.task {
+  height: 100px;
+  width: 180px;
+  padding: 10px;
+  background-color: #343434;
+  border-radius: 10px;
+  position: relative;
+}
+
+button {
+  width: min-content;
+  height: min-content;
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+  cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+}
+.completed-icon {
+  color: green;
+  opacity: 70%;
+}
+.completed-icon:hover {
+  color: lawngreen;
+  opacity: 100%;
+}
