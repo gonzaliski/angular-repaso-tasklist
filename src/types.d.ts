@@ -3,4 +3,4 @@ type Task = {
   title: string;
   completed: boolean;
 };
-type TaskState = 'completed' | 'all' | 'deleted';
+type TaskState = 'pending' | 'completed' | 'all' | 'deleted';

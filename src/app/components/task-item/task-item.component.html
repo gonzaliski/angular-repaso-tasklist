@@ -1,7 +1,7 @@
 <div class="task" (mouseenter)="onHover(true)" (mouseleave)="onHover(false)">
   <p>{{ task.title }}</p>
   @if (isHovered || task.completed) {
-  <button (click)="completeTask()">
+  <button (click)="completeTask(task.id)">
     <svg
       class="completed-icon"
       aria-hidden="true"

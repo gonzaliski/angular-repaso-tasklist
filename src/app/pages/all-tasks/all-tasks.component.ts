@@ -3,18 +3,18 @@ import { TasksComponent } from '../../components/tasks/tasks.component';
 import { TaskService } from '../../store/task.service';
 
 @Component({
-  selector: 'app-task-todo',
+  selector: 'app-all-tasks',
   imports: [TasksComponent],
-  templateUrl: './task-todo.component.html',
-  styleUrl: './task-todo.component.css',
+  templateUrl: './all-tasks.component.html',
+  styleUrl: './all-tasks.component.css',
 })
-export class TaskTodoComponent {
-  pendingTasks: Task[];
+export class AllTasksComponent {
+  tasks: Task[];
 
   constructor(private taskService: TaskService) {
     effect(() => {
-      this.pendingTasks = this.taskService.getPendingTasks();
+      this.tasks = this.taskService.tasks();
     });
-    this.pendingTasks = this.taskService.getPendingTasks();
+    this.tasks = this.taskService.tasks();
   }
 }

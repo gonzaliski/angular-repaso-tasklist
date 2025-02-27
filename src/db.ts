@@ -2,7 +2,7 @@ export const DBTasks = [
   {
     id: 1,
     title: 'Comprar comida',
-    completed: false,
+    completed: true,
   },
   {
     id: 2,

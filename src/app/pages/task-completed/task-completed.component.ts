@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { TasksComponent } from '../../components/tasks/tasks.component';
+import { TaskService } from '../../store/task.service';
 
 @Component({
   selector: 'app-task-completed',
@@ -8,5 +9,12 @@ import { TasksComponent } from '../../components/tasks/tasks.component';
   styleUrl: './task-completed.component.css',
 })
 export class TaskCompletedComponent {
-  filterType: TaskState = 'completed';
+  completedTasks: Task[];
+
+  constructor(private taskService: TaskService) {
+    effect(() => {
+      this.completedTasks = this.taskService.getCompletedTasks();
+    });
+    this.completedTasks = this.taskService.getCompletedTasks();
+  }
 }

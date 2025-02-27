@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TaskService } from '../../store/task.service';
 
 @Component({
   selector: 'app-task-item',
@@ -9,11 +10,12 @@ import { Component, Input } from '@angular/core';
 export class TaskItemComponent {
   @Input() task!: Task;
   isHovered = false;
+  constructor(private taskService: TaskService) {}
 
   onHover(state: boolean) {
     this.isHovered = state;
   }
-  completeTask() {
-    this.task.completed = !this.task.completed;
+  completeTask(taskId: number) {
+    this.taskService.markAsCompleted(taskId);
   }
 }

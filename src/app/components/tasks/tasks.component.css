@@ -2,9 +2,11 @@ ul {
   padding-top: 5%;
   height: 100%;
   width: 100%;
+  padding: 0 20%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  flex-wrap: wrap;
   gap: 20px;
   list-style: none;
   text-align: left;

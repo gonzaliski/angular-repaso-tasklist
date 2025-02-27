@@ -18,10 +18,10 @@ button {
   background-color: transparent;
 }
 .completed-icon {
-  color: green;
-  opacity: 70%;
+  color: rgb(14, 182, 14);
 }
 .completed-icon:hover {
+  transition: 0.3s ease-in;
   color: lawngreen;
   opacity: 100%;
 }
