@@ -15,6 +15,9 @@ export class TaskItemComponent {
   onHover(state: boolean) {
     this.isHovered = state;
   }
+  deleteTask(taskId: number) {
+    this.taskService.deleteTask(taskId);
+  }
   completeTask(taskId: number) {
     this.taskService.markAsCompleted(taskId);
   }

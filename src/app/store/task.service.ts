@@ -22,6 +22,9 @@ export class TaskService {
     };
     this.tasks.update((tasks) => [...tasks, newTask]);
   }
+  deleteTask(taskId: number) {
+    this.tasks.update((tasks) => tasks.filter((task) => task.id != taskId));
+  }
   getPendingTasks() {
     return this.tasks().filter((task) => !task.completed);
   }

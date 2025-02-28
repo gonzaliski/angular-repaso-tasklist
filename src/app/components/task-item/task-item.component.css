@@ -6,16 +6,28 @@
   border-radius: 10px;
   position: relative;
 }
+.buttons__container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 2px;
+  display: flex;
+  justify-content: space-between;
+}
 
 button {
   width: min-content;
   height: min-content;
-  position: absolute;
-  bottom: 0;
-  right: 2px;
   cursor: pointer;
   border-style: none;
   background-color: transparent;
+}
+.delete-icon {
+  color: darkgray;
+}
+.delete-icon:hover {
+  transition: 0.3s ease-in;
+  color: white;
 }
 .completed-icon {
   color: rgb(14, 182, 14);
